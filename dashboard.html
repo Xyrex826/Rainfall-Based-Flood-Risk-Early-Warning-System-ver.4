@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flood Risk Admin Dashboard</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<body>
+
+<!-- SIDEBAR -->    
+<div class="sidebar">
+    <div class="sidebar-header">
+        
+        <br>
+        <h2>Flood Watch <span>CDO</span></h2>
+        <br><br>
+    </div>
+    
+    <nav class="nav-menu">
+        <a href="#" class="nav-item active">
+            <i class="fa-solid fa-chart-pie"></i>
+            <span>Dashboard</span>
+        </a>
+        <a href="http://localhost/Version%202.1.6/barangay_page.html" class="nav-item">
+            <i class="fa-solid fa-map-location-dot"></i>
+            <span>Barangays</span>
+        </a>
+        <a href="http://localhost/Version%202.1.6/alert_page.html" class="nav-item">
+            <i class="fa-solid fa-bell"></i>
+            <span>Alerts</span>
+        </a>
+        <a href="http://localhost/Version%202.1.6/forecast_page.html" class="nav-item">
+            <i class="fa-solid fa-cloud-showers-heavy"></i>
+            <span>Forecast</span>
+        </a>
+        <a href="#" class="nav-item">
+            <i class="fa-solid fa-file-contract"></i>
+            <span>Reports</span>
+        </a>
+        
+        <div class="nav-divider"></div> <a href="#" class="nav-item">
+            <i class="fa-solid fa-gear"></i>
+            <span>Settings</span>
+        </a>
+        <a href="#" class="nav-item">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+            <span>Logs</span>
+        </a>
+    </nav>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="main">
+
+    <div class="topbar">
+
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search barangay...">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        </div>
+
+         <div class="greeting">
+            <div class="profile-circle">
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <div>
+                <span>Hello there,</span>
+                <h3 id="adminName">Admin</h3>
+            </div>
+        </div>
+
+    </div>
+
+    
+    <header class="content-header">
+            <div>
+                <h1>Admin Dashboard</h1>
+                <p>Unified River Basin & Barangay Risk</p>
+            </div>
+            <br>
+    </header>
+
+
+    <div class="table-container">
+        <table id="barangayTable">
+
+<center>
+        <h4 class="section-label">Current Flood Risk Status</h4>
+            <br>
+            </center>
+            <thead>
+                <tr>
+                    <th>Barangay</th>
+                    <th>Elevation (m)</th>
+                    <th>Rain (mm)</th>
+                    <th>Intensity (mm/h)</th>
+                    <th>Duration (hrs)</th>
+                    <th>Risk Level</th>
+                </tr>
+            </thead>
+            <tbody id="barangayBody">
+                <!-- Data will be populated here by script.js -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>

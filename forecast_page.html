@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flood Risk Admin Dashboard</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- SIDEBAR -->    
+<div class="sidebar">
+    <div class="sidebar-header">
+        <br>
+        <h2>Flood Watch <span>CDO</span></h2>
+        <br><br>
+    </div>
+    
+    <nav class="nav-menu">
+        <a href="http://localhost/Version%202.1.6/dashboard.html" class="nav-item">
+            <i class="fa-solid fa-chart-pie"></i>
+            <span>Dashboard</span>
+        </a>
+
+        <a href="http://localhost/Version%202.1.6/barangay_page.html" class="nav-item">
+            <i class="fa-solid fa-map-location-dot"></i>
+            <span>Barangays</span>
+        </a>
+
+        <a href="http://localhost/Version%202.1.6/alert_page.html" class="nav-item">
+            <i class="fa-solid fa-bell"></i>
+            <span>Alerts</span>
+        </a>
+
+        <a href="#" class="nav-item active">
+            <i class="fa-solid fa-cloud-showers-heavy"></i>
+            <span>Forecast</span>
+        </a>
+
+        <a href="http://localhost/Version%202.1.6/report_page.html" class="nav-item">
+            <i class="fa-solid fa-file-contract"></i>
+            <span>Reports</span>
+        </a>
+        
+        <div class="nav-divider"></div>
+
+        <a href="#" class="nav-item">
+            <i class="fa-solid fa-gear"></i>
+            <span>Settings</span>
+        </a>
+
+        <a href="#" class="nav-item">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+            <span>Logs</span>
+        </a>
+    </nav>
+</div>
+
+<div class="main">
+     <div class="topbar">
+
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search barangay...">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        </div>
+
+         <div class="greeting">
+            <div class="profile-circle">
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <div>
+                <span>Hello there,</span>
+                <h3 id="adminName">Admin</h3>
+            </div>
+        </div>
+</div>
+
+ <header class="content-header">
+        <h1>Barangay Forecast Center</h1>
+        <p>Unified 5-Day Risk Assessment</p>
+    </header>
+
+    <div id="allBarangaysContainer">
+        </div>
+
+<style>
+    /* Styling for the Barangay Title above each table */
+    .barangay-section-title {
+        background: #f1f5f9;
+        padding: 10px 20px;
+        border-radius: 8px;
+        margin: 30px 0 10px 0;
+        color: #1e293b;
+        border-left: 5px solid #2563eb;
+    }
+    
+    .forecast-table {
+        width: 100%;
+        border-collapse: collapse;
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        margin-bottom: 20px;
+    }
+    
+    .forecast-table th {
+        background: #f8fafc;
+        padding: 12px;
+        text-align: left;
+        color: #64748b;
+        font-size: 13px;
+        border-bottom: 2px solid #e2e8f0;
+    }
+
+    .forecast-table td {
+        padding: 12px;
+        border-bottom: 1px solid #f1f5f9;
+        font-size: 14px;
+    }
+</style>
+<script src="forecast_page.js"></script>
+
+</body>
+</html>
